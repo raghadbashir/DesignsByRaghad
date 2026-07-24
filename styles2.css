@@ -2,6 +2,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
@@ -10,8 +15,9 @@ body {
   color: #333;
   line-height: 1.8;
   direction: rtl;
-  text-align: right; 
+  text-align: right;
   padding: 40px 20px;
+  overflow-x: hidden;
 }
 
 /* Package Detail Section */
@@ -179,4 +185,34 @@ ul li {
 
 .back-to-main a:hover {
   background-color: #f4c38d;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pricing-container {
+    flex-wrap: wrap;
+  }
+
+  .pricing-card {
+    width: min(320px, 100%);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 24px 14px;
+  }
+
+  .pricing-title {
+    font-size: 26px;
+  }
+
+  .pricing-card {
+    padding: 18px;
+  }
+
+  .back-to-main a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
 }

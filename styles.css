@@ -4,12 +4,22 @@
   margin: 0;
   padding: 0;
 }
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: 'Playfair Display', serif, 'Tajawal' ;
  min-height: 100vh;
   display: flex;
   flex-direction: column;
   color: #333;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -51,6 +61,11 @@ body {
               height: 90px; /* الطول متاع الشعار */
             }
 
+            .logo_hero img {
+              width: min(500px, 60vw);
+              height: auto;
+            }
+
             /* تنسيق الشعار اللي فوق في التوب بار  */
             .logo img {
               height: 60px; 
@@ -87,6 +102,61 @@ body {
         .topbar nav a:hover {
           color: #f18c59; /* لون يوضح وقت التفاعل */
 }
+
+        .nav-toggle {
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          width: 40px;
+          height: 40px;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          z-index: 30;
+          padding: 0;
+        }
+
+        .nav-toggle span {
+          display: block;
+          width: 26px;
+          height: 3px;
+          background: #fff;
+          border-radius: 2px;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .nav-toggle.open span:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        .nav-toggle.open span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .nav-toggle.open span:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .nav-backdrop {
+          display: none;
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 15;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .nav-backdrop.open {
+          display: block;
+          opacity: 1;
+        }
+
+        body.nav-open {
+          overflow: hidden;
+        }
 
 
 
@@ -687,5 +757,242 @@ body {
                   .packages-button .btn:hover {
                     background-color: #f8ddc1;
                     transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Responsive / Mobile
+   ========================================================================== */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .video-showcase {
+    padding: 40px 50px;
+  }
+
+  .projects-grid {
+    gap: 50px;
+  }
+}
+
+/* Tablets / large phones - nav collapses into hamburger menu here */
+@media (max-width: 860px) {
+  .topbar {
+    padding: 20px 24px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .topbar nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: min(78vw, 300px);
+    margin: 0;
+    padding: 100px 2rem 2rem;
+    background: rgba(30, 26, 23, 0.97);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 20;
+  }
+
+  .topbar nav.open {
+    transform: translateX(0);
+  }
+
+  .topbar nav a {
+    margin-left: 0;
+    font-size: 1.15rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .about-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-stats {
+    gap: 1.5rem;
+  }
+
+  .projects-section {
+    padding: 40px 20px;
+  }
+
+  .projects-grid {
+    gap: 30px;
+  }
+
+  .project-box {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  /* Hover-only descriptions don't work on touch devices, so show them by default */
+  .description {
+    max-height: none;
+    opacity: 1;
+    padding: 15px 10px;
+  }
+
+  .video-showcase {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 16px;
+    padding: 0;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .phone-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
+
+  .content-text {
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .content-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .content-text p {
+    font-size: 1.05rem;
+  }
+
+  .skills-section {
+    padding: 40px 16px;
+  }
+
+  .skills-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .skill-card {
+    width: 120px;
+    height: 170px;
+  }
+
+  .design-packages-text-intro {
+    padding: 30px 20px;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .text-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .text-content p {
+    font-size: 1.05rem;
+  }
+
+  .packages-button {
+    padding-top: 20px;
+  }
+
+  .work-process-section {
+    padding: 30px 16px;
+  }
+
+  .footer {
+    border-radius: 30px;
+    padding: 30px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 12px 0;
+  }
+
+  .call-to-action h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .topbar {
+    padding: 16px 18px;
+  }
+
+  .logo img {
+    width: 56px;
+    height: 48px;
+  }
+
+  .logo_hero img {
+    width: 75vw;
+  }
+
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-stats {
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .project-box {
+    aspect-ratio: 3 / 4;
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 12px;
+  }
+
+  .skill-card {
+    width: 100px;
+    height: 150px;
+  }
+
+  .icon-img {
+    width: 44px;
+  }
+
+  .section-title,
+  .call-to-action h2,
+  .text-content h2 {
+    font-size: 1.5rem;
+  }
 }
 
