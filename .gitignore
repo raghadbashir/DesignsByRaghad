@@ -1,0 +1,87 @@
+# ---- keep the deploy clean (originals & unused media are excluded) ----
+originals_backup/
+.DS_Store
+**/.DS_Store
+.vscode/
+*~
+**/*~
+_convert_images.py
+_converted_pngs.txt
+
+# original videos (replaced by compressed .mp4)
+*.mov
+*.MOV
+
+# unused or replaced image originals (not referenced by any page)
+images/.DS_Store
+images/IMG_2189.PNG
+images/IMG_2189.PNG~
+images/IMG_2197.PNG
+images/IMG_2197.PNG~
+images/IMG_5134.JPG
+images/IMG_5135.JPG
+images/IMG_5139.JPG
+images/IMG_5140.JPG
+images/IMG_5141 2.jpg
+images/eslam/eslam and najla sticker.png
+images/eslam/eslam b card 2_.png
+images/eslam/eslam b card 2_.png~
+images/eslam/eslam box_.png
+images/eslam/eslam box_.png~
+images/eslam/mc.png
+images/fakher/1111.png
+images/fakher/222222.png
+images/fakher/222222.png~
+images/fakher/3333.png
+images/fakher/3333.png~
+images/fakher/33333.png
+images/fakher/33333.png~
+images/fakher/44444.png
+images/fakher/5555.png
+images/fakher/5555.png~
+images/fakher/6666.png~
+images/fakher/6777.png
+images/fakher/888.png
+images/harmony/Screenshot 2024-10-12 at 12.46.05 AM.png
+images/harmony/bo.png
+images/harmony/box  harmony copy.png~
+images/harmony/box harmony 2.png
+images/harmony/box harmony 2.png~
+images/harmony/boxes harmony.png
+images/harmony/d.png
+images/harmony/d.png~
+images/harmony/harmony card.png
+images/harmony/harmony tag.png
+images/harmony/harmony tag.png~
+images/harmony/harmony with shadow.png
+images/himani/3 Postcard Mockups.png
+images/himani/box 4.png
+images/himani/box 4.png~
+images/himani/himani box 1.png
+images/himani/himani card 1.png
+images/himani/himani card 1.png~
+images/himani/himani logotype.png
+images/najla and islam/.DS_Store
+images/najla and islam/1.png
+images/najla and islam/1.png~
+images/najla and islam/10.png~
+images/najla and islam/11.png
+images/najla and islam/11.png~
+images/najla and islam/12.png
+images/najla and islam/14.png
+images/najla and islam/14.png~
+images/najla and islam/3.png
+images/najla and islam/3.png~
+images/najla and islam/4.png
+images/najla and islam/4.png~
+images/najla and islam/5.png~
+images/najla and islam/6.png
+images/najla and islam/6.png~
+images/najla and islam/7.png
+images/najla and islam/7.png~
+images/najla and islam/8.png
+images/najla and islam/9.png
+images/skill logos/.DS_Store
+images/zahra/2.6.png
+images/zahra/DSS.png
+images/zahra/DSS.png~

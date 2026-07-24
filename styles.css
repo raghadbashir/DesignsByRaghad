@@ -1,0 +1,691 @@
+/* Reset and Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Playfair Display', serif, 'Tajawal' ;
+ min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+
+
+@font-face {
+  font-family: 'NaveidArabic';
+  src: url('typography/AligarhArabicFREEPERSONALUSE-ExtraBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}/* Hero Banner */
+/* هذا الجزء مسؤول على البانر اللي في بداية الصفحة */
+
+
+
+
+
+
+
+.hero-banner {
+              background-image: url('images/IMG_2189.PNG'); /* الصورة الخلفية - حط الصورة اللي تبيها */
+              background-size: cover; /* تخلي الصورة تعبي الخلفية كلها */
+              background-position: center; /* يخلي الصورة تتركز في الوسط */
+              display: flex; /* باش نقدر نرتب العناصر اللي داخل */
+              align-items: center; /* يخلي المحتوى في نص العمود */
+              color: white; /* اللون الافتراضي للنصوص */
+              text-align: center; /* يخلي النصوص تيجي في الوسط */
+            }
+
+            /* نفس الكلاس متكرر - الأفضل تدمجهم مع بعض */
+            /* هنا نكمل التنسيق ونحط ارتفاع البانر */
+            .hero-banner {
+              justify-content: center; /* يخلي المحتوى في نص الصف */
+              height: 100vh; /* يخلي البانر ياخذ ارتفاع الشاشة بالكامل */
+            }
+
+            /* تنسيق شعارك اللي داخل البانر */
+            .hero-content .logo img {
+              width: 90px; /* العرض متاع الشعار */
+              height: 90px; /* الطول متاع الشعار */
+            }
+
+            /* تنسيق الشعار اللي فوق في التوب بار  */
+            .logo img {
+              height: 60px; 
+              width: 70px; 
+            }
+
+.topbar {
+          position: absolute; /* يخلي التوب بار فوق المحتوى، بس  يثبت لما تنزل */
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: transparent; /* make it see-through */
+          padding: 24px 48px;
+
+            display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 1; 
+          /* makes the topbar on top */
+           /* مهم باش ما يغطيه شي ثاني من الصفحة */
+
+        }
+
+       
+
+        .topbar nav a {
+          margin-left: 2rem;
+          text-decoration: none;
+          color: white; /* important for visibility */
+          font-weight: 500;
+          transition: 0.3s;  /* يخلي التغيير في اللون يصير ناعم مش فجأة */
+        }
+
+        .topbar nav a:hover {
+          color: #f18c59; /* لون يوضح وقت التفاعل */
+}
+
+
+
+  
+
+
+
+
+
+
+.about-section {
+          background-color: #fdf8f4;
+          padding: 4rem 2rem;
+          text-align: center; /* center everything by default */
+        }
+        .elevated {
+          background-color: #fffaf5; /* your beige color */
+          margin-top: -80px;  /* يرفع السيكشن لفوق شوي باش يدخل شوية فوق البانر مثلاً */
+          padding: 60px 30px;
+          border-radius: 30px;
+          /* z-index: 10;
+          position: relative; */
+        }
+
+        */
+        /* .about-text h2 {
+          font-size: 1.5rem;
+          margin-bottom: 0.3rem;
+        } */
+
+        .about-text h3 {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          color:dimgray;
+          font-family: 'Aligarh', sans-serif;
+          font-family: MyCustomFont;
+        }
+
+        .about-text p {
+          font-size: 1.1rem;
+          line-height: 1.7;
+          margin-bottom: 2rem;
+          color:#777;
+
+
+        }
+
+        .about-stats {
+                     /* تخليهم بحدا بعض بدل من فوق بعض  */
+
+          display: flex; 
+          justify-content: center;
+          gap: 2.5rem;
+          flex-wrap: wrap;
+          margin-top: 32px;
+          color:#888;
+
+        }
+
+
+
+
+.video-showcase {
+        background-color: #f8ddc1;
+        padding: 40px 130px;
+        display: flex;       /* يخلي الفيديو والنص جنب بعض */
+        align-items: center;              /* يخلي المحتوى في نص الخط العمودي */
+        border-radius: 40px;
+        box-shadow: 0 20px 20px  rgba(0, 0, 0, 0) ;
+      }
+      .video-grid {
+        display: grid;                                 /* استخدام grid لتنظيم الفيديوات */
+        grid-template-columns: repeat(2, 240px);       /* عمودين، كل واحد 240px */
+        grid-gap: 40px;                                /* المسافة بين الفيديوات */
+        padding: 30px;
+      }
+      .phone-frame {
+        width: 200px;
+        height: 300px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0);
+        
+        background: #000;
+      }
+      .phone-frame video {
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+      }
+      .content-text {
+        max-width: 500px; 
+        padding: 20px;
+        text-align: right;
+        /* for the text glow effect  */
+        text-shadow: 0 0 3.5px rgb(251, 244, 223); 
+
+  
+
+
+      }
+      .content-text h2 {
+        font-size: 2rem;
+        color: #ffffff;
+        margin-bottom: 15px;
+
+      }
+      .content-text p {
+        font-size: 1.3rem;
+        color: #fbfbfb;
+        line-height: 1.9;
+      }
+      
+.projects-section {
+        text-align: center;
+        padding: 60px 40px;
+        background-color: #fffaf5;
+      }
+      .past-work-title{
+
+      color: #777;
+       font-size: 1.5rem;
+
+
+      }
+
+      .projects-grid {
+        /* makes the slides beside each other not in a row */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+         /* flex-wrap: wrap allows the items to wrap onto new lines on smaller screens. */
+        gap: 130px;
+        margin-top: 40px;
+      }
+
+      
+      .project-box {
+        border-radius: 30px;
+        /* Ensures that anything inside the box that exceeds its boundaries  gets clipped/cut off. */
+        overflow: hidden;
+
+        transition: transform 0.4s , box-shadow 0.4s;
+        /* transform and box-shadow will change over 0.4 seconds with an ease */
+        /* This is what makes the hover animation feel smooth when the card “lifts up.” */
+        width: 350px;
+        /* Combined with aspect-ratio, this defines the shape of the box. */
+        aspect-ratio: 4 / 6;
+        background-color: #fff;
+        box-shadow: 0 8px 20px rgba(40, 39, 39, 0.05);
+        display: flex;
+        flex-direction: column;
+        /* Turns the box into a Flexbox container. */
+        /* arranges child elements vertically from top to bottom */
+      }
+
+      .project-box:hover {
+        transform: translateY(-13px) scale(1.10);
+          /* وقت ما تمرر الماوس على البوكس، يطلع لفوق 13px ويكبر بنسبة 10% */
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            /* يزيد من قوة الظل باش يبين إنه طالع من الشاشة، يعطيه تأثير 3D خفيف */
+
+      }
+
+     .slideshow-container {
+              width: 100%;
+              height: 100%;
+              position: relative;
+
+  /* ضروري باش نقدر نحط الصور داخله بـ position: absolute؛
+     يعني الصور تنحط فوق بعض وداخل نفس الحاوية */
+
+            }
+
+/* 
+            	لأن 
+              .slideshow-container فيها position: relative، توا absolute معناها إن كل .slide راح ينحط فوق بعضه داخلها.
+		هذا مهم باش نقدر نتحكم في ظهور كل صورة بوقتها. */
+
+            .slide {
+              position: absolute;    /* يخلي كل سلايد (صورة أو فيديو) يركب فوق الثاني داخل الـ .slideshow-container */
+              width: 100%;
+              height: 100%;  /* يخلي السلايد يعبي الحاوية بالكامل، من العرض والطول */
+              animation: fadeAnimation 12s infinite;   /* يشغل أنيميشن اسمه fadeAnimation لمدة 12 ثانية ويعاود من جديد طول الوقت */
+
+            }
+
+            .slide img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+                /*  تخلي الصورة تغطي الإطار بالكامل حتى لو تضطر تقص منها شوي */
+
+            }
+
+            /* Description under each slideshow */
+            .description {
+              max-height: 0;     /* يخلي النص مخفي لأنه ما عنداش ارتفاع – يبدأ مسكر */
+
+              font-size: small;
+              color: #777;
+              overflow: hidden;
+              opacity: 0;
+              transition: all 0.5s ease;
+              padding: 0 10px; /* horizontal padding only */
+            }
+            .project-box:hover .description {
+              /* هذا السطر يعني: لما تمرر الماوس على .project-box، يتم تطبيق هذه الخصائص على العنصر اللي داخله وعنده الكلاس .description */
+              max-height: 500px; /* enough height to show full content */
+              opacity: 1;
+                /* يظهر النص (كان مخفي بـ opacity: 0)، توا يولي ظاهر بالكامل */
+             
+                padding: 15px 10px; /* restore vertical padding */
+            }
+
+
+.slideshow-container:hover .slide {
+              /* توقف الأنيميشن وقت ما يوقف الماوس على  */
+                animation-play-state: paused;
+              }
+
+
+            .slide:nth-child(1) { animation-delay: 0s; }
+            .slide:nth-child(2) { animation-delay: 4s; }
+            .slide:nth-child(3) { animation-delay: 8s; }
+            .slide:nth-child(4) { animation-delay: 12s; }
+             /* .slide:nth-child(5) { animation-delay: 16s; }
+              .slide:nth-child(6) { animation-delay: 20s; }
+            .slide:nth-child(7) { animation-delay: 24s; }
+            .slide:nth-child(8) { animation-delay: 28s; }
+            .slide:nth-child(9) { animation-delay: 32s; }
+             .slide:nth-child(10) { animation-delay: 36; }
+ */
+
+
+            	/* 	كل سلايد  يتبدل بالتسلسل كل 4 ثواني. */
+	/* 	وهكي يصير عندك سلايدر أوتوماتيكي ناعم يبدل الصور واحدة بواحدة. */
+
+
+            @keyframes fadeAnimation {
+              /* @keyframes in CSS is a rule used to
+               create animations by defining how an 
+               element’s styles should change at specific
+                points during the animation timeline. */
+              0% { opacity: 0; }
+              /* Fading in */
+              8% { opacity: 1; }
+              /* Fully visible */
+              33% { opacity: 1; }
+              /* Fading out (opacity transitions from 1 to 0)*/
+              41% { opacity: 0; }
+              
+              /* Hidden until animation loops again */
+              100% { opacity: 0; }
+            }
+.pdf-button {
+
+
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #f18c59; 
+          color: #fff;
+          border-radius: 20px;
+          text-decoration: none;   	/* Removes the default underline that <a> tags usually have. */
+          font-size: 16px;
+        }
+       
+        .pdf-button:hover {
+          background-color:#f8ddc1;
+                    transition: background-color 0.3s;
+
+        }
+/* Footer Styles */
+
+
+
+
+.skills-section {
+              padding: 50px 20px;
+              background-color: #fffaf5;
+              text-align: center;
+            }
+
+            .skills-container {
+              display: flex;
+              
+              gap: 30px;
+              margin-top: 30px;
+
+            }
+
+            .skills-section-title{
+
+              color: #858585;
+              font-size: 24px;
+
+
+
+            }
+
+            .skill-card {
+              width: 142px;
+              height: 200px;
+              perspective: 1000px;
+            }
+
+            .icon-img {
+              width: 60px;
+              margin-bottom: 12px;
+            }
+
+            .card-inner {
+              width: 100%;
+              height: 100%;
+              transition: transform 0.6s;  /* يخلي الحركة (الدوران) تكون سلسة وتدوم 0.6 ثانية */
+              transform-style: preserve-3d; /* ضروري باش يحافظ على الشكل الثلاثي الأبعاد وقت يقلب */
+            }
+
+            .skill-card:hover .card-inner {
+            transform: rotateY(180deg); /* لما تحط الماوس على الكرت، يقلبه من اليمين لليسار بزاوية 180 درجة */
+            }
+
+            .card-front, .card-back {
+              position: absolute;  /* يثبتهم فوق بعض داخل الكرت باش ينقلبو */
+              width: 100%;
+              height: 100%;
+              border-radius: 20px;
+              backface-visibility: hidden;   /* يخلي الوجه الخلفي ما يبانش وقت ما يكون مدور */
+              align-items: center;
+              justify-content: center;
+              padding: 15px;
+              color: white;
+              box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+            .card-front {
+              display: flex;
+              flex-direction: column;
+              background-color: #fbd7b1;
+              border-radius: 15px;
+              padding: 20px;
+            }
+
+            .card-back {
+              display: flex;                 
+              background-color: #f18c59;
+              transform: rotateY(180deg);
+              width: 100%;
+              border-radius: 15px;
+            }
+
+            
+            .title-bottom {
+              font-size: 18px;
+              color: #ffffff;
+            text-align: center;    
+
+
+
+              
+            }
+
+            .card-front h3 {
+              font-size: 19px;
+            }
+
+            .card-back p {
+              font-size: 14px;
+              line-height: 1.6;
+            }
+
+
+
+/* footer */
+.footer {
+            background-color: #f59769;
+            color: #eee;
+            width: 100%;
+            height:   100%;
+              padding: 40px 40px;
+              border-radius: 65px;
+
+
+          }
+
+         .footer-column li, .footer-column a {
+            font-size: 14px;
+            color: #fffdfd;
+            text-decoration: none;
+            line-height: 1.8;
+            list-style: none;
+          }
+
+         
+
+          .footer-container {
+            display:flex;
+            justify-content: space-around;
+            margin: auto;
+            padding: 0 20px;
+            position: relative;
+            
+            
+          }
+
+          .footer-column {
+            margin: 20px;
+          }
+
+          .footer-column h3 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-family: 'Tajawal';
+          }
+
+          .footer-column h2.footer-logo {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+          }
+
+
+          /* icons design */
+          .social-icons a {
+            margin-right: 10px;
+            color: #ffffff;
+            font-size: 18px;
+            transition: color 0.3s ease;
+          }
+
+          .social-icons a:hover {
+            color: #fff;
+          }
+
+
+
+
+
+
+.work-process-section {
+
+            background-color: #fffaf5;
+            padding: 20px 20px;
+            padding-top: 10px;
+
+          }
+
+          .section-title {
+            font-size: 2.7rem;
+            color: #858585;
+            margin-bottom: 50px;
+            font-weight: bold;
+          }
+
+          .work-step {
+            background-color: #ffffff;
+            border-right: 4px solid #f18c59;
+            padding: 30px 25px;
+            padding-bottom: 30px;
+            border-radius: 30px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            text-align: right;
+          }
+
+          .work-step:hover {
+            transform: translateY(-5px);
+          }
+
+          .work-step h3 {
+            font-size: 1.5rem;
+            color: #f18c59;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+
+          .work-step p {
+            font-size: 1.1rem;
+            color: #7c7c7c;
+            line-height: 1.8;
+          }
+
+          .call-to-action {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px dashed #f18c59;
+          }
+
+          .call-to-action h2 {
+            font-size: 2.2rem;
+            color: #858585;
+            margin-bottom: 15px;
+            font-weight: bold;
+          }
+
+          .note {
+            font-size: 1rem;
+            color: #555;
+              padding-top: 20px;
+            margin-bottom: 15px;
+            line-height: 1.7;
+          }
+
+          .btn.book-call {
+            background-color: #f18c59;
+            color: white;
+            text-decoration: none;
+            margin-top: 30px;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+          }
+
+          .btn.book-call:hover {
+            background-color: #f8ddc1;
+          }
+
+          /* Responsive */
+          @media (max-width: 768px) {
+            .work-step {
+              text-align: center;
+              border-right: none;
+              border-bottom: 4px solid #e88d83;
+            }
+
+            .work-step h3 {
+              font-size: 1.3rem;
+            }
+
+            .section-title,
+            .call-to-action h2 {
+              font-size: 2rem;
+            }
+          }
+
+        
+
+.packages-button{
+                    align-content: center;
+                              padding-top: 140px;
+                              padding-bottom: 10px;
+                    /* margin-top: 100px; */
+                      padding-bottom: 0px;
+
+
+                    justify-content: center;
+                    align-items: center;
+
+                  } 
+                  .design-packages-text-intro {
+                    background-color: #fbd7b1;
+                    border-radius: 55px;
+                    padding: 30px 30px;
+                    display: flex;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                  }
+
+                  /* محتوى النص */
+                  .text-content {
+                    flex: 1;
+                    color: #fdf8f4;
+                    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+                  }
+
+                  .text-content h2 {
+                    font-size: 2.2rem;
+                    margin-bottom: 20px;
+                    
+                    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+                  }
+
+                  .text-content p {
+                    font-size: 1.3rem;
+                    line-height: 1.8;
+                    max-width: 500px;
+                    margin: 0 auto;
+                    margin-bottom: 2px;
+                  }
+
+                  /* الزر */
+                  .packages-button {
+                    padding-top: 2px;
+                    width: 100%; /* يجعل الزر يأخذ صف لحاله */
+                  }
+
+                  .packages-button .btn {
+                    background-color: #f18c59;
+                    color: #fff;
+                    font-size: 16px;
+                    border-radius: 30px;
+                    text-decoration: none;
+                    transition: background-color 0.3s ease, transform 0.2s ease;
+                  }
+
+                  .packages-button .btn:hover {
+                    background-color: #f8ddc1;
+                    transform: scale(1.05);
+}
+
