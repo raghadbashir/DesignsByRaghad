@@ -29,7 +29,7 @@ body {
 
 
 .hero-banner {
-              background-image: url('images/IMG_2189.PNG'); /* الصورة الخلفية - حط الصورة اللي تبيها */
+              background-image: url('images/IMG_2189.jpg'); /* الصورة الخلفية - حط الصورة اللي تبيها */
               background-size: cover; /* تخلي الصورة تعبي الخلفية كلها */
               background-position: center; /* يخلي الصورة تتركز في الوسط */
               display: flex; /* باش نقدر نرتب العناصر اللي داخل */
